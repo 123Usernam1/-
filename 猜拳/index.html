@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>猜拳游戏</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page1">
+	<div class="loader">
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+</div>	
+<div class="page2">	
+<div class="container">
+	<header class="header">
+		<h1>猜拳</h1>
+		<button id="restart" class="restart-btn">重新开始</button>
+	    <div id="score" class="score flex">
+			<p>玩家：0</p>
+			<p>电脑：0</p>
+		</div>
+		<div class="face">
+			<img src="images/readyl.png" alt="">
+			<img src="images/readyr.png" alt="">
+		</div>
+	<h2>请做出选择</h2>
+	<div class="choices">
+		<img src="images/1-rock.png"  id="rock">
+	    <img src="images/1-scissors.png" id="scissors">
+	    <img src="images/1-paper.png" id="paper">	 
+	</div>	
+	</header> 
+	<!-- modal -->
+	<div class="modal">
+		<div id="result" class="modal-content">
+			<h1 class="text-win">OK你赢啦！</h1>
+			<p>电脑的选择为</p>
+			<img src="images/1-rock.png"  id="rock">
+		</div> 
+	</div>
+</div>
+</div>
+<div class="slider">
+    <div class="btn"><</div>
+	<div class="box">
+	 王小毛01
+	</div>
+</div>
+<script src="jquery.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
