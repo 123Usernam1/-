@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>购物</title>
+ <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body>
+  <!-- 开头 -->
+  <header>
+    <div id="topAdv">
+	 <a href="#"><img src="images/adv.jpg"></a>
+	 <img src="images/close.png" class="close">
+	</div>
+	<!-- top -->
+	<div class="top flex left">
+	  <a href="#">FlowerStores</a>
+	</div>
+	<!-- top -->
+	<!-- nav -->
+	<nav>
+	  <ul class="flex">
+	  	<li class="first"><a href="#">全部商品分类</a></li>
+	  	<li><a href="#">首页</a></li>
+	  	<li><a href="#">节日礼物</a></li>
+	  	<li><a href="#">蛋糕</a></li>
+	  	<li><a href="#">商务礼物</a></li>
+	  	<li><a href="#">个性定制</a></li>
+	  	<li><a href="#">鲜花</a></li>
+	  	<li><a href="#">生日礼物</a></li>
+		<li class="last"></li>
+	  </ul>
+	</nav>
+  </header>
+  <!-- 内容 -->
+  <section>
+    <div class="product">
+	 <ul class="prolist">
+	 	<li><img src="images/dg_img1.jpg" alt="">
+		    <p class="price">188元</p>
+			<p class="title">鲜奶蛋糕</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/dg_img2.jpg" alt="">
+		    <p class="price">288元</p>
+			<p class="title">粒子蛋糕</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/dg_img3.jpg" alt="">
+		   <p class="price">388元</p>
+			<p class="title">慕斯蛋糕</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/dg_img6.jpg" alt="">
+		   <p class="price">488元</p>
+			<p class="title">草莓蛋糕</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/srpic1.jpg" alt="">
+		    <p class="price">88元</p>
+			<p class="title">小熊玩具</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/srpic2.jpg" alt="">
+		    <p class="price">98元</p>
+			<p class="title">钻石玩具</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/srpic3.jpg" alt="">
+		   <p class="price">108元</p>
+			<p class="title">鲜花玩具</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/srpic4.jpg" alt="">
+		    <p class="price">118元</p>
+			<p class="title">熊猫玩具</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/xh_img1.jpg" alt="">
+		  <p class="price">218元</p>
+			<p class="title">鲜花1</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/xh_img2.jpg" alt="">
+		  <p class="price">318元</p>
+			<p class="title">鲜花2</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/xh_img3.jpg" alt="">
+		  <p class="price">328元</p>
+			<p class="title">鲜花3</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 	<li><img src="images/xh_img4.jpg" alt="">
+		  <p class="price">338元</p>
+			<p class="title">鲜花4</p>
+			<span class="join">加入购物车</span>
+		</li>
+	 </ul>
+	 <ul class="bar">
+	 	<li class="hot"></li>
+	 	<li></li>
+	 	<li></li>
+	 </ul>
+	</div>
+  </section>
+  <!-- 页脚 -->
+  <footer>
+   <p>Location of FlowerStores</p>
+   <ul>
+   	<li><img src="images/aa.png" alt=""></li>
+   	<li><img src="images/bb.png" alt=""></li>
+   	<li><img src="images/cc.png" alt=""></li>
+   </ul>
+  </footer>
+  <!-- slider -->
+  <div class="slider">
+    <div class="btn"><</div>
+	<div class="box">
+	  <!--  
+	  <dl><dt><img src="images/dg_img1.jpg"></dt><dd class="ti">鲜奶蛋糕</dd><dd class="pi">188元</dd></dl>
+	  -->
+	</div>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script>
+   //窗口广告栏的关闭
+   $("img.close").click(function(){
+     $("#topAdv").slideUp();
+   });
+   //移动菜单动画效果
+    $("nav ul li").not(".first,.last").hover(function(){
+     //经过
+	 var left=$(this).position().left;//li与ul左边的距离
+	 var width=$(this).width();//获取li的宽度
+	 $(".last").show().css("width",width).animate({left:left},300);
+   },function(){
+     //离开
+	 $(".last").hide();
+   });
+   //侧边栏动画
+   var slide=0;
+   $(".btn").click(function(){
+	if(slide==0){
+	$(".slider").animate({right:"0px"},500);
+	slide=1;
+	}else{
+	$(".slider").animate({right:"-300px"},500);
+	slide=0;
+	}    
+   });
+   //选项卡移动的动画
+   var num=0;
+   $("ul.bar li").click(function(){
+	 num=$(this).index();	 
+    $(this).addClass("hot").siblings().removeClass("hot");
+	$("ul.prolist").stop().animate({
+	  marginLeft:-990*num+'px'
+	},500);
+
+   });
+   //加入购物车
+   $("span.join").click(function(){
+	//图片路径
+    var img=$(this).parent().find("img").attr("src");
+	//价格
+	var price=$(this).parent().find("p.price").html();
+	//商品名称
+	var ti=$(this).parent().find("p.title").html();
+	$(".box").append("<dl><dt><img src='"+img+"'></dt><dd class='ti'>"+ti+"</dd><dd class='pi'>"+price+"</dd></dl>");
+   });
+  </script>
+ </body>
+</html>

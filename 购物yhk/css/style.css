@@ -1,0 +1,240 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+body{
+ font:18px 微软雅黑;
+}
+li{
+ list-style:none;
+}
+a{
+ display: block;
+ text-decoration: none;
+}
+.flex{
+ display:flex;
+ flex-wrap:wrap;/*自动换行*/
+}
+/*header style*/
+#topAdv{
+ width: 100%;
+ height: 100px;
+ background:url(../images/advbg.png);
+ position: relative;/*定位参照*/
+}
+#topAdv img{ 
+ margin:auto;
+ display:block;
+}
+img.close{
+ position:absolute;
+ top:0;
+ right:0;
+ cursor:pointer;
+ width: 20px;
+ height: 20px;
+}
+.top{
+ padding:30px 0; 
+ justify-content:center;/*居中*/
+}
+.top a{
+ font-size: 45px;
+ font-style:italic;
+ color:#cc0033;
+ text-shadow:0 0 5px #000;/*文字投影*/
+}
+.left{
+ animation-name:left;
+ animation-duration:2s;
+}
+@keyframes left{
+  0%{
+   transform:translateX(-2000px);
+  }
+  60%{
+   transform:translateX(30px);
+  }
+  80%{
+   transform:translateX(-10px);
+  }
+  100%{
+   transform:translateX(0px);
+  }
+}
+nav{
+ width: 100%;
+ height:50px;
+ background: #000;
+ line-height: 50px;
+}
+nav a{
+ color: #fff;
+ padding: 0px 30px;
+ position: relative;/*定位参照*/
+ font-size: 14px;
+ z-index:99;/*层叠关系置顶*/
+}
+nav ul{
+ width: 1200px;
+ margin:0 auto;
+ position: relative;/*定位参照*/
+}
+nav ul li.first{
+ width: 190px;
+ text-align: center;
+ background: #ff9900; 
+}
+li.first a{
+ color:#000;
+}
+nav ul li.last{
+ width: 100px;
+ height: 50px;
+ background: green;
+ position: absolute;
+ left: 190px;
+ display: none;/*隐藏*/
+}
+.product{
+  width: 1000px;
+  height: 400px;
+  margin: 30px auto;
+}
+
+
+ul.prolist li img{
+ width: 220px;
+ height: 220px;
+}
+.product ul li{
+ width: 220px;
+ float: left;
+ margin: 0px 9px;
+ padding: 4px;
+ border: 1px solid #6699ff;
+ text-align: center;
+ perspective: 800px;/*透视距离*/
+}
+p.price{
+  font-size: 18px;
+  color: #cc0033;
+  font-weight: bold;
+  line-height: 30px;
+}
+p.title{
+ font-size: 14px;
+ color:#666;
+ line-height: 30px;
+}
+span.join{
+  height: 40px;
+  background: #cc0033;
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  cursor: pointer;
+}
+ul.prolist{
+ width: 9999px;
+}
+.product{
+ position: relative;
+ overflow:hidden;
+}
+ul.bar{
+ position: absolute;
+ left: 43.5%;
+ bottom: 10px;
+}
+ul.bar li{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #000;
+    float: left;
+    margin: 6px;
+    cursor: pointer;
+}
+ul.bar li.hot{
+ background: #6699ff;
+}
+
+footer{
+ padding:30px 0;
+ background: #6699ff;
+ color:#fff;
+ text-align: center;
+ display:flex;
+ justify-content:center;
+}
+footer ul{
+ display:flex;
+}
+footer ul li img{
+ width: 40px;
+ height: 40px;
+ margin-left: 20px;
+ cursor: pointer; 
+}
+footer ul li:hover img{
+ transform:rotate(360deg) scale(2);
+ transition:2s;
+}
+.slider{
+ width: 300px;
+ height: 100%;
+ position: fixed;
+ right:-300px;
+ top: 0px;
+ background: #fff;
+ border-left: 4px solid #6699ff;
+}
+.btn{
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  width: 40px;
+  padding: 20px 0;
+  background: #6699ff;
+  border-radius: 10px 0 0 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.box dl dt{
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+.box img{
+ width: 100%;
+ height: 100%;
+}
+.box dd.ti{
+ color: #666;
+ font-size: 18px;
+ line-height: 30px;
+}
+.box dl dd{
+ width: 130px;
+ line-height: 20px;
+ float: right;
+}
+.box dl dd.pi{
+  color: red;
+  font-size: 16px;
+  line-height: 30px;
+}
+.box dl{
+ width: 205px;
+ height: 60px;
+ padding: 10px;
+ border-bottom: 1px dotted #6699ff;
+ margin: auto;
+}
